@@ -24,11 +24,36 @@ app.get('/', function(req, res) {
 app.post('/calculate', function(req, res) {
   console.log('/calculate path hit');
   var calculation = req.body;
-  console.log(calculation);
-  res.send('heard you on path /calculate');
+  var result = calculate(calculation).toString();
+  res.send(result);
 });
 
 // listen on port
 app.listen(app.get('port'), function() {
   console.log("We're live on port ", app.get('port'));
 });
+
+function calculate(calculation) {
+  var x = parseInt(calculation.numOne);
+  var y = parseInt(calculation.numTwo);
+  var operation = calculation.operator;
+  var result;
+
+  switch (operation) {
+    case 'add':
+      result = x + y;
+      break;
+    case 'subtract':
+      result = x - y;
+      break;
+    case 'multiply':
+      result = x * y;
+      break;
+    case 'divide':
+      result = x / y;
+      break;
+    default:
+      result = "something went wrong";
+  }
+  return result;
+}

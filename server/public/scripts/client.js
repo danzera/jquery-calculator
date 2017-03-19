@@ -27,7 +27,7 @@ $(document).ready(function() {
     var calculation = {
       numOne: x,
       numTwo: y,
-      operation: operator
+      operator: operator
     };
     console.log("object being sent to the server: ", calculation);
     // AJAX 'POST' call to the server
