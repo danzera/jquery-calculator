@@ -22,12 +22,12 @@ function updateDOM(result) {
 function postCalculate(calculation) {
   $.ajax({
     type: 'POST',
-    url: '/calculate',
+    url: '/calculator',
     data: calculation,
     success: function(res) {
       updateDOM(res);
     }
-  }); // END AJAX 'POST' '/calculate'
+  }); // END AJAX 'POST' '/calculator'
 } // END postCalculate() function
 
 function addEventListeners() {
