@@ -9,17 +9,43 @@
   </head>
   <body>
     <h1>Server Side Calculator</h1>
-    <form class="calculator">
-      <input type="text" placeholder="First Number" id="numOneInCalculator">
-      <div class="operators">
-        <button type="button" name="add" id="add" class="operator"> + </button>
-        <button type="button" name="subtract" id="subtract" class="operator"> - </button>
-        <button type="button" name="multiply" id="multiply" class="operator"> * </button>
-        <button type="button" name="divide" id="divide" class="operator"> / </button>
+    <form id="calculator">
+      <input type="text" class="numField" placeholder="First Number" id="numOneInCalculator">
+      <!-- NUMBER BUTTONS -->
+      <div class="numbers">
+        <div class="numbersTopRow">
+          <button type="button" name="seven" class="number">7</button>
+          <button type="button" name="eight" class="number">8</button>
+          <button type="button" name="nine" class="number">9</button>
+        </div>
+        <div class="numbersMiddleRow">
+          <button type="button" name="four" class="number">4</button>
+          <button type="button" name="five" class="number">5</button>
+          <button type="button" name="six" class="number">6</button>
+        </div>
+        <div class="numbersBottomRow">
+          <button type="button" name="one" class="number">1</button>
+          <button type="button" name="two" class="number">2</button>
+          <button type="button" name="three" class="number">3</button>
+        </div>
+        <div class="numbersZeroRow">
+          <button type="button" name="zero" class="number">0</button>
+        </div>
       </div>
-      <input type="text" placeholder="Second Number" id="numTwoInCalculator">
+      <!-- MATHEMATICAL OPERATOR BUTTONS -->
+      <div class="operators">
+        <button type="button" name="add" id="add" class="operator">+</button>
+        <button type="button" name="subtract" id="subtract" class="operator">-</button>
+        <button type="button" name="multiply" id="multiply" class="operator">*</button>
+        <button type="button" name="divide" id="divide" class="operator">/</button>
+      </div>
+      <input type="text" class="numField" placeholder="Second Number" id="numTwoInCalculator">
       <br>
       <input type="submit" value="Crunch the Numbers">
+      <input type="button" value="Clear" id="clear">
     </form>
+    <div class="results">
+
+    </div>
   </body>
 </html>

@@ -55,5 +55,6 @@ function calculate(calculation) {
     default:
       result = "something went wrong";
   }
+  console.log(result);
   return result;
 }
