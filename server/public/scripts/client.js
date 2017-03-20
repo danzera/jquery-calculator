@@ -30,7 +30,8 @@ function postCalculate(calculation) {
     success: function(res) {
       // display results on the DOM upon success
       displayResult(res);
-      return res;
+      // reset numOne to equal the result of the prior calculation
+      setNumOne(res);
     }
   }); // END AJAX 'POST' '/calculator'
 } // END postCalculate() function
@@ -115,7 +116,16 @@ function changeHighlighting() {
   $('#' + operator).addClass('highlight');
 }
 
+// setter for operator & symbol
 function setOperation(operand, mathOperator) {
   operator = operand;
   symbol = mathOperator;
+}
+// setter for numOne
+function setNumOne(num) {
+  numOne = num;
+}
+// setter for numTwo
+function setNumTwo(num) {
+  numTwo = num;
 }
