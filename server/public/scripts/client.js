@@ -6,7 +6,6 @@ var symbol;
 // number variables used to store input from the numerical keypad on the DOM
 var numOne = "";
 var numTwo = "";
-var minions;
 
 $(document).ready(function() {
   addEventListeners();
@@ -32,7 +31,7 @@ function postCalculate(calculation) {
       // display waiting message
       $('.results').append('<p>Minions busy crunching the numbers...</p>');
       // display results on the DOM upon success
-      minions = setTimeout(function() {
+      setTimeout(function() {
         $('.results').empty();
         // display current calculation's result
         $('.results').append('<p>Result: ' + res + '</p>');
