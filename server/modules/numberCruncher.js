@@ -1,11 +1,11 @@
-// // import express
-// var express = require('express');
-// // unpack (?) express router functionality
-// var router = express.Router();
-// // import path functionality
-// var path = require('path');
+// import express -- UNNECESSARY IN THIS FILE?!
+var express = require('express');
+// unpack (?) express router functionality -- UNNECESSARY IN THIS FILE?!
+var router = express.Router();
+// import path functionality -- UNNECESSARY IN THIS FILE?!
+var path = require('path');
 
-function calculation(calc) {
+function numberCrucher(calc) {
   var x = parseInt(calc.numOne);
   var y = parseInt(calc.numTwo);
   var operation = calc.operator;
@@ -30,5 +30,5 @@ function calculation(calc) {
   return result;
 }
 
-// export calculation function
-module.exports = calculation;
+// export numberCrucher function
+module.exports = numberCrucher;
