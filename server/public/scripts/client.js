@@ -32,7 +32,11 @@ function postCalculate(calculation) {
       // display waiting message
       $('.results').append('<p>Minions busy crunching the numbers...</p>');
       // display results on the DOM upon success
-      minions = setTimeout(displayResult(res), 3000);
+      minions = setTimeout(function() {
+        $('.results').empty();
+        // display current calculation's result
+        $('.results').append('<p>Result: ' + res + '</p>');
+      }, 3000);
       // reset numOne to equal the result of the prior calculation
       setNumOne(res);
     }
