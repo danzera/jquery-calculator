@@ -44,7 +44,7 @@ function numberCruncher(calc) {
       result = x / y;
       break;
     default:
-      result = "something went wrong";
+      result = "calculator temporarily out of order";
   }
   return result;
 }

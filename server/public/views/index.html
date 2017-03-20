@@ -10,10 +10,9 @@
   <body>
     <h1>Server Side Calculator</h1>
     <div class="calculatorDisplay">
-      
+
     </div>
     <form id="calculator">
-      <input type="text" class="numField" placeholder="First Number" id="numOneInCalculator">
       <!-- NUMBER BUTTONS -->
       <div class="numbers">
         <div class="numbersTopRow">
@@ -39,13 +38,15 @@
       <div class="operators">
         <button type="button" name="add" id="add" class="operator">+</button>
         <button type="button" name="subtract" id="subtract" class="operator">-</button>
-        <button type="button" name="multiply" id="multiply" class="operator">*</button>
+        <button type="button" name="multiply" id="multiply" class="operator">x</button>
         <button type="button" name="divide" id="divide" class="operator">/</button>
       </div>
-      <input type="text" class="numField" placeholder="Second Number" id="numTwoInCalculator">
-      <br>
       <input type="submit" value="Crunch the Numbers">
       <input type="button" value="Clear" id="clear">
+      <br>
+      <input type="text" class="numField" placeholder="First Number" id="numOneInCalculator">
+      <br>
+      <input type="text" class="numField" placeholder="Second Number" id="numTwoInCalculator">
     </form>
     <div class="results">
 
